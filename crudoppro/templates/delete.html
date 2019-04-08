@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee data delete</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+    h2{
+        font-size: 70px;
+        text-shadow: 2px 2px red;
+    }
+    body{
+        background-color: cyan;
+    }
+    label{
+        font-size: 25px;
+        font-family: cursive;
+        color: red;
+    }
+    #divid{
+        margin-top: 30px;
+        font-size: 20px;
+    }
+    a{
+        color: red;
+    }
+</style>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6">
+            <form method="post">
+                <h2> Delete Data..</h2>
+                {% csrf_token %}
+                <label>Enter Employee Id</label>
+                {{ dform.emp_id }}<br>
+<center>
+                    <input type="submit" value="Delete" class="btn btn-success">
+                    <input type="reset" value="Clear" class="btn btn-danger">
+</center>
+
+
+            </form>
+            <center>
+                <div id="divid">
+                    <a id="aid" href="/#/"> GoTo Home</a>
+                </div>
+            </center>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

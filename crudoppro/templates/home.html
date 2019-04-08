@@ -1,0 +1,53 @@
+{% load static %}
+<html>
+<head>
+    <title>home page</title>
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+    .jumbotron{
+        background-color: deeppink;
+        border: 2px solid black;
+        border-radius: 20px;
+        box-shadow: 10px 10px 10px black ,20px 20px 10px red;
+    }
+    body{
+        background-color: cyan;
+
+    }
+    h1{
+        font-size: 100px;
+        text-shadow: 3px 3px 3px red , 7px 7px 7px blue;
+    }
+    .btn{
+        border-radius:10px ;
+        box-shadow: 2px 2px 2px yellow;
+        text-shadow: 2px 2px 2px black;
+    }
+    a{
+    margin-left: 80px;
+    font-size: 30px;
+    border: 2px solid red;
+}
+</style>
+<body>
+<center><h1>CURD operations</h1></center>
+    <div class="container">
+
+        <div class="jumbotron">
+        <a href="/insert/" class="btn bg-success text-white">Insert Data</a>
+            <a href="/update/"class="btn bg-success text-white">Update Data</a>
+        <a href="/retrive/"class="btn bg-success text-white">Retrive Data</a>
+            <a href="/delete/"class="btn bg-success text-white">Delete Data</a>
+
+
+    </div>
+    </div>
+</body>
+</html>

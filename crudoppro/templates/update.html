@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>update data</title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+    h2{
+        text-shadow: 2px 2px 2px red,3px 3px green;
+        font-size: 70px;
+    }
+    body{
+
+        background-color: cyan;
+    }
+    label{
+        margin-top: -5px;
+        font-size: 25px;
+        color: red;
+        font-family: cursive;
+    }
+    form{
+        margin-top: 30px;
+    }
+    #divid{
+        margin-top: 30px;
+        font-size: 20px;
+    }
+    a{
+        color: red;
+    }
+</style>
+<body>
+
+    <div class="contanier">
+        <div class="row">
+            <div class="offset-md-3 col-md-6">
+                <form method="post">
+                    <h2>Update Product..</h2>
+                    {% csrf_token %}
+                    <label>Enter Your Id</label>
+                {{ uform.emp_id }}<br>
+                    <label>Enter New Location</label>
+                {{ uform.emp_location }}<br>
+                    <center>
+                <input type="submit" value="Update" class="btn btn-success">
+                <input type="reset" value="Clear" class="btn btn-danger">
+                    </center>
+                    <center><div id="divid"><a id="aid" href="/#/"> GoTo Home</a></div></center>
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+
+
+</body>
+</html>

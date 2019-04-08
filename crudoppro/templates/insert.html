@@ -1,0 +1,96 @@
+<html>
+<head>
+    <title>Emp insert data</title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+    label{
+        color: red;
+        margin-top: -20px;
+    }
+    #pid{
+        margin-top: 10px;
+    }
+    body{
+        background-color: cyan;
+    }
+    h2{
+        text-align: center;
+        font-size: 45px;
+    }
+    form{
+        margin-top: 20px;
+        border: 2px solid black;
+        border-radius: 20px;
+        box-shadow: 10px 10px 5px red, -10px -10px 5px red;
+    }
+    #homeid{
+        margin-top: 200px;
+        font-size: 20px;
+
+    }
+    a{
+        margin-left: 100px;
+        color: black;
+    }
+    h5{
+        margin-top: 200px;
+
+    }
+</style>
+<body>
+<div class="container">
+    <div class="row">
+        <div class=" col-md-3">
+            <h5>
+                Welcome to Insert Page
+            </h5>
+        </div>
+        <div col-md-6>
+
+
+
+    <form method="post">
+         <h1>Insert Employee Detalis..</h1>
+        {% csrf_token %}
+        <label>Enter Employee Id</label>
+        {{ iform.emp_id }}<br>
+        <label>Enter Employee First Name</label>
+        {{ iform.emp_first_name }}<br>
+        <label>Enter Employee Last Name</label>
+        {{ iform.emp_last_name }}<br>
+        <label>Enter Employee Mobile Number</label>
+        {{ iform.emp_mobile_number }}<br>
+        <label>Enter Employee Email Id</label>
+        {{ iform.emp_email_id }}<br>
+        <label>Enter Employee Salary</label>
+        {{ iform.emp_salary }}<br>
+        <label>Enter Employee Location</label>
+        {{ iform.emp_location }}<br>
+        <label>Enter Employee Position</label>
+        {{ iform.emp_position }}<br>
+        <center>
+        <input type="submit" value="Insert" class="btn btn-success">
+        <input type="reset" value="Clear" class="btn btn-danger">
+        </center>
+    </form>
+
+
+        </div>
+        <div class="col-md-3 " id="homeid">
+            <a href="/#/">Go To Home</a>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

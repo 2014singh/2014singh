@@ -1,0 +1,98 @@
+<html>
+<head>
+    <title> Retrive Employee Data</title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+    table{
+        margin-top: 10px;
+        width: 1200px;
+    }
+    th,td{
+        padding: 10px 20px 10px 20px;
+        text-align: center;
+    }
+    #nopro{
+        color: red;
+        border: 2px red solid;
+        height: 400px;
+        padding-top: 150px;
+        font-size: 50px;
+        margin: 10px 300px 10px;
+        text-align: center;
+        background-image: radial-gradient(green,white,yellow,darkorchid,deeppink);
+        border-radius: 20px 100px 20px 100px;
+    }
+    body{
+        background-color: cyan;
+    }
+    #divid{
+        margin-top: 30px;
+        font-size: 20px;
+    }
+    a{
+        color: red;
+    }
+    h2{
+        font-size: 70px;
+        text-shadow: 2px 2px red;
+    }
+    tbody:nth-of-type(even){
+        background-color: darkorchid;
+    }
+    tbody:nth-of-type(odd){
+        background-color: orchid;
+    }
+    thead{
+        background-color: red;
+    }
+</style>
+<body>
+<center>
+    <h2>Employee Data..</h2>
+    {% if rdata %}
+        <table border="2px">
+        <thead>
+        <tr>
+            <th> emp id</th>
+            <th>first name</th>
+            <th>last name</th>
+            <th>mobile number</th>
+            <th>email id</th>
+            <th>salary</th>
+            <th>location</th>
+            <th>position</th>
+        </tr>
+        </thead>
+        {% for i in rdata %}
+            <tbody>
+            <tr>
+                <td>{{ i.emp_id }}</td>
+                <td>{{ i.emp_first_name }}</td>
+                <td>{{ i.emp_last_name }}</td>
+                <td>{{ i.emp_mobile_number }}</td>
+                <td>{{ i.emp_email_id }}</td>
+                <td>{{ i.emp_salary }}</td>
+                <td>{{ i.emp_location }}</td>
+                <td>{{ i.emp_position }}</td>
+
+            </tr>
+            </tbody>
+
+        {% endfor %}
+
+        </table>
+    {% else %}
+        <h2 id="nopro">data is not avliable</h2>
+    {% endif %}
+</center>
+<center>
+    <div id="divid"> <a id="aid" href="/#/"> GoTo home</a></div>
+</center>
+</body>
+</html>
